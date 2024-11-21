@@ -1,10 +1,7 @@
 import React from "react";
 import Section from "./components/Section";
 import { Cover } from "@/components/ui/cover";
-import { BackgroundLines } from "@/components/ui/background-lines";
-import { Compare } from "./components/ui/compare";
-import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "./components/ui/hero-highlight";
+("use client");
 
 const HomePage = () => {
   return (
@@ -26,20 +23,10 @@ const HomePage = () => {
               <img
                 src="images/curve.png"
                 className="absolute top-full left-0 w-full xl:-mt-1"
-                width={624}
-                height={28}
                 alt="Curve"
               />
             </span>
           </h1>
-          {/* <Compare
-            firstImage="https://assets.aceternity.com/code-problem.png"
-            secondImage="https://assets.aceternity.com/code-solution.png"
-            firstImageClassName="object-cover object-left-top"
-            secondImageClassname="object-cover object-left-top"
-            className="h-[250px] w-[200px] md:h-[500px] md:w-[500px] mt-20"
-            slideMode="hover"
-          /> */}
         </div>
       </div>
     </Section>

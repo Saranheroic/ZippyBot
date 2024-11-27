@@ -18,7 +18,7 @@ export const Cover = ({ children, className }) => {
       setContainerWidth(ref.current?.clientWidth ?? 0);
 
       const height = ref.current?.clientHeight ?? 0;
-      const numberOfBeams = Math.floor(height / 10); // Adjust the divisor to control the spacing
+      const numberOfBeams = Math.floor(height / 8); // Adjust the divisor to control the spacing
       const positions = Array.from(
         { length: numberOfBeams },
         (_, i) => (i + 1) * (height / (numberOfBeams + 1))
@@ -32,7 +32,7 @@ export const Cover = ({ children, className }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       ref={ref}
-      className="relative hover:bg-n-8/90 group/cover inline-block dark:bg-neutral-900 bg-n-8/90 px-2 py-2  transition duration-200 rounded-sm"
+      className="relative hover:bg-n-8/90 group/cover inline-block  bg-n-8/90 px-2 py-2  transition duration-200 rounded-sm"
     >
       <AnimatePresence>
         {hovered && (
@@ -96,8 +96,8 @@ export const Cover = ({ children, className }) => {
         key={String(hovered)}
         animate={{
           scale: hovered ? 0.8 : 1,
-          x: hovered ? [0, -30, 30, -30, 30, 0] : 0,
-          y: hovered ? [0, 30, -30, 30, -30, 0] : 0,
+          x: hovered ? [0, -5, 5, -5, 5, 0] : 0,
+          y: hovered ? [0, 5, -5, 5, -5, 0] : 0,
         }}
         exit={{
           filter: "none",
@@ -118,14 +118,14 @@ export const Cover = ({ children, className }) => {
             repeatType: "loop",
           },
           scale: {
-            duration: 0.2,
+            duration: 3,
           },
           filter: {
             duration: 0.2,
           },
         }}
         className={cn(
-          "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-200",
+          "dark:text-white inline-block text-white relative z-20 group-hover/cover:text-white transition duration-200",
           className
         )}
       >
@@ -201,7 +201,7 @@ export const CircleIcon = ({ className, delay }) => {
   return (
     <div
       className={cn(
-        `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 dark:bg-white opacity-20 group-hover/cover:bg-white`,
+        `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600  opacity-20 group-hover/cover:bg-white`,
         className
       )}
     ></div>

@@ -149,7 +149,7 @@ export function BackgroundGradientDemo() {
                 aria-describedby="tier-free"
                 class="text-emerald-600 ring-1 ring-inset ring-emerald-500 hover:ring-emerald-600 focus-visible:outline-emerald-600 mt-8 rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 block w-full"
               >
-                Browse Components
+                Get started
               </button>
               <button class="text-xs text-neutral-500 mt-2 text-left">
                 Questions?

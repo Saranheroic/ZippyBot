@@ -3,6 +3,7 @@ import Section from "./components/Section";
 import { Cover } from "@/components/ui/cover";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import Button from "./components/Button";
+import Generating from "./components/Generating";
 
 ("use client");
 import { BackgroundBeams } from "./components/ui/background-beams";
@@ -35,9 +36,16 @@ const HomePage = () => {
               with zippyboy, the Discord bot job app.
             </p>
             <Button white>Get Started</Button>
-            <div className="mt-16 rounded-2xl border-2 overflow-hidden border-transparent ">
-              <img src="images/robot.jpg" />
+            <div className="mt-16 rounded-2xl border-2 overflow-hidden border-gradient relative">
+              <img src="images/robot.jpg" alt="zippybot" />
             </div>
+            <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
+          </div>
+          <h5 className="tagline  text-center text-n-1/50">
+            Helping Graduate Students and Developers get job with ease
+          </h5>
+          <div>
+            <img />
           </div>
         </div>
 

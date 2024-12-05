@@ -156,6 +156,12 @@ export default {
           ".text-n-1": { color: "var(--n-1)" },
           ".bg-n-1": { backgroundColor: "var(--n-1)" },
         },
+        ".border-gradient": {
+          border: "2px solid transparent",
+          overflow: "hidden",
+          background:
+            "linear-gradient(var(--color-gray-950), var(--color-gray-950)) padding-box, conic-gradient(from 45deg, var(--color-violet-400), var(--color-fuchsia-400), var(--color-amber-300), var(--color-teal-300), var(--color-violet-400)) border-box",
+        },
       });
     }),
   ],

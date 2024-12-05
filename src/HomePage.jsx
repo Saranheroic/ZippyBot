@@ -4,6 +4,7 @@ import { Cover } from "@/components/ui/cover";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import Button from "./components/Button";
 import Generating from "./components/Generating";
+import { logos } from "./constants";
 
 ("use client");
 import { BackgroundBeams } from "./components/ui/background-beams";
@@ -45,7 +46,16 @@ const HomePage = () => {
             Helping Graduate Students and Developers get job with ease
           </h5>
           <div>
-            <img />
+            <ul className="flex ">
+              {logos.map((logo, id) => (
+                <li
+                  className="flex items-center justify-center flex-1 h-[8.5rem]"
+                  key={id}
+                >
+                  <img src={logo.img} width={80} height={28} alt={logo} />
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

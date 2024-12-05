@@ -1,3 +1,9 @@
+import Amazon from "/images/CompanyLogos/Amazon.png";
+import google from "/images/CompanyLogos/google.png";
+import apple from "/images/CompanyLogos/apple.png";
+import meta from "/images/CompanyLogos/meta.png";
+import netflix from "/images/CompanyLogos/netflix.png";
+
 export const navigation = [
   {
     id: "0",
@@ -30,5 +36,38 @@ export const navigation = [
     title: "Sign in",
     url: "#login",
     onlyMobile: true,
+  },
+];
+
+export const logos = [
+  {
+    id: 1,
+    img: Amazon,
+    alt: "Amazon",
+    title: "Amzon",
+  },
+  {
+    id: 2,
+    img: google,
+    alt: "Amazon",
+    title: "Amzon",
+  },
+  {
+    id: 3,
+    img: netflix,
+    alt: "Amazon",
+    title: "Amzon",
+  },
+  {
+    id: 4,
+    img: apple,
+    alt: "Amazon",
+    title: "Amzon",
+  },
+  {
+    id: 5,
+    img: meta,
+    alt: "Amazon",
+    title: "Amzon",
   },
 ];

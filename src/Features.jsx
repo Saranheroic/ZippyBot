@@ -16,7 +16,11 @@ import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 export function BentoGridThirdDemo() {
   return (
     <Section>
-      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] ">
+      <h1 className="md:max-w-md lg:max-w-2xl max-w-[50rem] mx-auto mb-12 lg:mb-10 md:text-center font-bold text-5xl">
+        {" "}
+        Work Smarter, Not Harder with ZippyBot
+      </h1>
+      <BentoGrid className="max-w-4xl  mx-auto md:auto-rows-[20rem] mt-24">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -63,28 +67,28 @@ const SkeletonOne = () => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-col space-y-2 "
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-neutral-600 dark:border-white/[0.2] p-2  items-center space-x-2 bg-n-8/90 dark:bg-black"
+        className="flex flex-row rounded-full border  border-white/[0.2] p-2  items-center space-x-2 bg-black"
       >
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-600 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="w-full  h-4 rounded-full  bg-neutral-900" />
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-600 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-n-8/90 dark:bg-black"
+        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-black"
       >
-        <div className="w-full bg-gray-600 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="w-full  h-4 rounded-full bg-neutral-900" />
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
       </motion.div>
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-neutral-600 dark:border-white/[0.2] p-2 items-center space-x-2 bg-n-8/90 dark:bg-black"
+        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center space-x-2 bg-black"
       >
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-600 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="w-full  h-4 rounded-full bg-neutral-900" />
       </motion.div>
     </motion.div>
   );
@@ -113,7 +117,7 @@ const SkeletonTwo = () => {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-col space-y-2"
     >
       {arr.map((_, i) => (
         <motion.div
@@ -122,7 +126,7 @@ const SkeletonTwo = () => {
           style={{
             maxWidth: Math.random() * (100 - 40) + 40 + "%",
           }}
-          className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
+          className="flex flex-row rounded-full border border-white/[0.2] p-2  items-center space-x-2 bg-black w-full h-4"
         ></motion.div>
       ))}
     </motion.div>
@@ -147,7 +151,7 @@ const SkeletonThree = () => {
         repeat: Infinity,
         repeatType: "reverse",
       }}
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2] rounded-lg  flex-col space-y-2"
       style={{
         background:
           "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
@@ -184,11 +188,11 @@ const SkeletonFour = () => {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-row space-x-2"
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl bg-n-8/90 p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-600 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-black border-white/[0.1] border  flex flex-col items-center justify-center"
       >
         <img
           src="images/bot.png"
@@ -198,13 +202,13 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
+          Why apply for jobs? Zippybot will handle everything!
         </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-red-500 bg-red-100 bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Delusional
         </p>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-n-8/90 p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-600 flex flex-col items-center justify-center">
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl  p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center">
         <img
           src="images/bot.png"
           alt="avatar"
@@ -213,15 +217,15 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
+          Zippybot: The efficient way to level up your career.
         </p>
-        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-green-500  bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Sensible
         </p>
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl bg-n-8/90 p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-600 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl  p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center"
       >
         <img
           src="images/bot.png"
@@ -231,9 +235,9 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
+          I need Zippybot… seriously, help me find a job!
         </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-orange-500 bg-orange-100 bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Helpless
         </p>
       </motion.div>
@@ -270,11 +274,11 @@ const SkeletonFive = () => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-col space-y-2"
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-600 dark:border-white/[0.2] p-2  items-start space-x-2 bg-n-8/90 dark:bg-black"
+        className="flex flex-row rounded-2xl border border-white/[0.2] p-2  items-start space-x-2 bg-black"
       >
         <img
           src="images/saran1.png.png"
@@ -283,16 +287,28 @@ const SkeletonFive = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="text-xs text-neutral-500">
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
+        <div className="flex flex-col tracking-tighter">
+          <p className="text-[10px]  ">
+            <span className="text-neutral-500">Meet the Founder -</span> &nbsp;
+            Saran Nagarajan
+          </p>
+
+          <p className="text-xs text-neutral-500">
+            {" "}
+            My mission is to help gamers seize global opportunities without
+            compromising their playtime.
+          </p>
+        </div>
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-600 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
+        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-black"
       >
-        <p className="text-xs text-neutral-500">Use PHP.</p>
+        <p className="text-xs text-neutral-500">
+          <a href="https://x.com/Saran2302" target="_blank">
+            Follow me on X.
+          </a>
+        </p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
       </motion.div>
     </motion.div>
@@ -300,10 +316,11 @@ const SkeletonFive = () => {
 };
 const items = [
   {
-    title: "AI Content Generation",
+    title: "Global Job Listings",
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        Fetch jobs from around the world tailored for gamers who value
+        efficiency.
       </span>
     ),
     header: <SkeletonOne />,
@@ -311,10 +328,10 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-100" />,
   },
   {
-    title: "Automated Proofreading",
+    title: "One-Click Application Links",
     description: (
       <span className="text-sm">
-        Let AI handle the proofreading of your documents.
+        Simplified access to job applications, saving you time.
       </span>
     ),
     header: <SkeletonTwo />,
@@ -322,10 +339,11 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-100" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "Tailored Alerts",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Receive job updates directly in your Discord server, personalized to
+        your preferences.
       </span>
     ),
     header: <SkeletonThree />,
@@ -333,10 +351,10 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-100" />,
   },
   {
-    title: "Sentiment Analysis",
+    title: "Optimized for Gamers",
     description: (
       <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
+        Designed for those who prioritize gaming but need career opportunities.
       </span>
     ),
     header: <SkeletonFour />,
@@ -345,10 +363,10 @@ const items = [
   },
 
   {
-    title: "Text Summarization",
+    title: "24/7 Functionality",
     description: (
       <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
+        Zippybot works tirelessly, ensuring you never miss an opportunity.
       </span>
     ),
     header: <SkeletonFive />,

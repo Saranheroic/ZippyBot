@@ -3,10 +3,17 @@ import React from "react";
 import { BackgroundGradient } from "./components/ui/background-gradient";
 import Section from "./components/Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import Heading from "./components/Heading";
 
 export function BackgroundGradientDemo() {
   return (
-    <Section className="mt-24">
+    <Section className="overflow-hidden" id="pricing ">
+      <Heading
+        tag="Get started with ZippyBot"
+        title="Pay once, use forever"
+        className="mt-28"
+      />
+
       <div className="flex flex-wrap justify-center items-center  p-4 bg-n-8/90  gap-3">
         <BackgroundGradient className="rounded-[22px] max-w-sm w-full p-4 sm:p-10 bg-black dark:bg-zinc-900">
           <div class="dark:bg-black dark:border-white/[0.2]   rounded-3xl py-6 ring-1 ring-gray-900/10 sm:mx-8 lg:mx-0 border border-transparent h-full flex flex-col justify-between">
@@ -613,8 +620,15 @@ export function BackgroundGradientDemo() {
             </div>
           </div>
         </BackgroundGradient>
+        <div className="flex justify-center mt-10">
+          <a
+            className="text-xs font-code font-bold tracking-wider uppercase border-b"
+            href="/pricing"
+          >
+            See the full details
+          </a>
+        </div>
       </div>
-      <BottomLine />
     </Section>
   );
 }

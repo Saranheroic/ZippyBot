@@ -3,6 +3,9 @@ import google from "/images/CompanyLogos/google.png";
 import apple from "/images/CompanyLogos/apple.png";
 import meta from "/images/CompanyLogos/meta.png";
 import netflix from "/images/CompanyLogos/netflix.png";
+import uber from "/images/CompanyLogos/uber.png";
+import microsoft from "/images/CompanyLogos/microsoft.png";
+import nvdia from "/images/CompanyLogos/nvdia.png";
 
 export const navigation = [
   {
@@ -69,5 +72,83 @@ export const logos = [
     img: meta,
     alt: "Amazon",
     title: "Amzon",
+  },
+];
+
+export const collabText =
+  "With single command get unlimted job listing around the world, it's the perfect solution for Graduate Students and Junior developers.";
+
+export const collabContent = [
+  {
+    id: "0",
+    title: "Seamless Integration",
+    text: collabText,
+  },
+  {
+    id: "1",
+    title: "Get Unlimeted Job listing .",
+  },
+  {
+    id: "2",
+    title: "Start Applyiing with single click",
+  },
+];
+
+export const collabApps = [
+  {
+    id: "0",
+    title: "Figma",
+    icon: Amazon,
+    width: 26,
+    height: 36,
+  },
+  {
+    id: "1",
+    title: "Notion",
+    icon: apple,
+    width: 34,
+    height: 36,
+  },
+  {
+    id: "2",
+    title: "Discord",
+    icon: google,
+    width: 36,
+    height: 28,
+  },
+  {
+    id: "3",
+    title: "Slack",
+    icon: netflix,
+    width: 34,
+    height: 35,
+  },
+  {
+    id: "4",
+    title: "Photoshop",
+    icon: meta,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "5",
+    title: "Protopie",
+    icon: nvdia,
+    width: 100,
+    height: 34,
+  },
+  {
+    id: "6",
+    title: "Framer",
+    icon: microsoft,
+    width: 100,
+    height: 34,
+  },
+  {
+    id: "7",
+    title: "Raindrop",
+    icon: uber,
+    width: 38,
+    height: 32,
   },
 ];

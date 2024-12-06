@@ -1,10 +1,10 @@
 import Booking from "./Booking";
 import Hero from "./Hero";
 import ButtonGradient from "./components/ButtonGradient";
-import Button from "./components/Button";
 import HomePage from "./HomePage";
 import { BentoGridThirdDemo } from "./Features";
 import { BackgroundGradientDemo } from "./pricing";
+import Explain from "./components/Explain";
 
 const App = () => {
   return (
@@ -13,6 +13,8 @@ const App = () => {
         <Hero />
         <HomePage />
         <BentoGridThirdDemo />
+
+        <Explain />
         <BackgroundGradientDemo />
 
         <Booking />

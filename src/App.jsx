@@ -5,6 +5,8 @@ import HomePage from "./HomePage";
 import { BentoGridThirdDemo } from "./Features";
 import { BackgroundGradientDemo } from "./pricing";
 import Explain from "./components/Explain";
+import Roadmap from "./components/Roadmap";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
 
         <Explain />
         <BackgroundGradientDemo />
+        <Roadmap />
+        <Footer />
 
         <Booking />
       </div>

@@ -9,4 +9,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  define: {
+    "process.env": {}, // Provide an empty process.env object for browser compatibility
+  },
 });

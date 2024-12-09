@@ -15,7 +15,7 @@ export default function Booking() {
     })();
   }, []);
   return (
-    <div className="flex flex-col justify-center items-center h-screen ">
+    <div className="flex flex-col justify-center items-center  ">
       <button
         data-cal-link="2kgamer-plays-hkcfjv"
         data-cal-config='{"theme":"dark"}'

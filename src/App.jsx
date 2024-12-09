@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden ">
         <Hero />
         <HomePage />
         <BentoGridThirdDemo />
@@ -20,7 +20,6 @@ const App = () => {
         <BackgroundGradientDemo />
         <Roadmap />
         <Footer />
-
         <Booking />
       </div>
 

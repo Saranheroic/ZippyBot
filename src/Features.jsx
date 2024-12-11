@@ -10,31 +10,29 @@ import Section from "./components/Section";
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Track issues effectively",
+      title: "Global Job Listings",
       description:
-        "Track and manage your project issues with ease using our intuitive interface.",
+        " Fetch jobs from around the world tailored for gamers who value efficiency.",
       skeleton: <SkeletonOne />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r border-neutral-800",
     },
     {
-      title: "Capture pictures with AI",
-      description:
-        "Capture stunning photos effortlessly using our advanced AI technology.",
+      title: "One-Click Application Links",
+      description: " Simplified access to job applications, saving you time.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 border-neutral-800",
     },
     {
-      title: "Watch our AI on YouTube",
-      description:
-        "Whether its you or Tyler Durden, you can get to know about our product on YouTube",
+      title: "Watch our ZippyBot on YouTube",
+      description: "you can get to know about our product on YouTube",
       skeleton: <SkeletonThree />,
       className: "col-span-1 lg:col-span-3 lg:border-r  border-neutral-800",
     },
     {
       title: "Deploy in seconds",
       description:
-        "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.",
+        "With our blazing fast, state of the art, cutting edge,  you can deploy your model in seconds.",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b border-none",
     },
@@ -48,9 +46,10 @@ export function FeaturesSectionDemo() {
           </h4>
 
           <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto  text-center font-normal text-neutral-300">
-            From Image generation to video generation, Everything AI has APIs
-            for literally everything. It can even create this website copy for
-            you.
+            🌟 My mission is to help gamers seize global opportunities without
+            compromising their playtime. Zippybot combines efficiency,
+            automation, and a love for gaming to connect you with career paths
+            that fit your lifestyle.
           </p>
         </div>
         <div className="relative ">
@@ -132,7 +131,7 @@ export const SkeletonThree = () => {
           {/* TODO */}
           <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
           <img
-            src="images/"
+            src="images/thumbail.png"
             alt="header"
             width={800}
             height={800}
@@ -214,6 +213,50 @@ export const SkeletonTwo = () => {
       </div>
       <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r  from-black to-transparent  h-full pointer-events-none" />
       <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l  from-black  to-transparent h-full pointer-events-none" />
+      <div className="flex flex-row">
+        {images.map((image, idx) => (
+          <motion.div
+            key={"images-second" + idx}
+            style={{
+              rotate: Math.random() * 20 - 10,
+            }}
+            variants={imageVariants}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"
+          >
+            <img
+              src={image}
+              alt="bali images"
+              width="500"
+              height="500"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+            />
+          </motion.div>
+        ))}
+      </div>
+      <div className="flex flex-row">
+        {images.map((image, idx) => (
+          <motion.div
+            key={"images-second" + idx}
+            style={{
+              rotate: Math.random() * 20 - 10,
+            }}
+            variants={imageVariants}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"
+          >
+            <img
+              src={image}
+              alt="bali images"
+              width="500"
+              height="500"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+            />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };

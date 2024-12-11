@@ -6,6 +6,9 @@ import netflix from "/images/CompanyLogos/netflix.png";
 import uber from "/images/CompanyLogos/uber.png";
 import microsoft from "/images/CompanyLogos/microsoft.png";
 import nvdia from "/images/CompanyLogos/nvdia.png";
+import roadmap1 from "/images/image-2.png";
+import roadmap2 from "/images/image-3.png";
+import roadmap4 from "/images/discord.png";
 
 export const navigation = [
   {
@@ -156,35 +159,35 @@ export const collabApps = [
 export const roadmap = [
   {
     id: "0",
-    title: "Voice recognition",
-    text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
-    date: "May 2023",
+    title: "Job listing",
+    text: "Enable the JobBot with a single discord command to start, making it easier for users to interact with the app hands-free.",
+    date: "August 2024",
     status: "done",
-    imageUrl: "roadmap1",
+    imageUrl: roadmap1,
     colorful: true,
   },
   {
     id: "1",
-    title: "Gamification",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
-    date: "May 2023",
+    title: "Auto Job-Apply",
+    text: "Tired of filling out endless job applications? Zippybot’s Auto-Apply feature takes the hassle out of your job search, allowing you to focus on what matters most.",
+    date: "May 2025",
     status: "progress",
-    imageUrl: "roadmap2",
+    imageUrl: roadmap2,
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-    date: "May 2023",
+    title: "Unlimited Listings, Perfectly Filtered for You",
+    text: "Finding the right job has never been easier. With Zippybot’s Unlimited Listings and Advanced Filtering Options, you’ll have access to a world of opportunities tailored just for you.",
+    date: "August 2024",
     status: "done",
-    imageUrl: "roadmap3",
+    imageUrl: roadmap2,
   },
   {
     id: "3",
-    title: "Integration with APIs",
-    text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
-    date: "May 2023",
+    title: "Zippybot: For Every Platform, Not Just Discord",
+    text: "Zippybot isn’t just a tool for Discord—it’s a game-changer for any platform. Whether you’re using Slack, Telegram, or even custom bots, Zippybot seamlessly integrates to bring job opportunities to your fingertips.",
+    date: "August 2025",
     status: "progress",
-    imageUrl: "roadmap4",
+    imageUrl: roadmap1,
   },
 ];

@@ -15,7 +15,6 @@ const App = () => {
         <Hero />
         <HomePage />
         <FeaturesSectionDemo />
-
         <Explain />
         <BackgroundGradientDemo />
         <Roadmap />

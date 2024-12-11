@@ -1,376 +1,275 @@
-"use client";
-import { cn } from "@/lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "./components/ui/bento-grid";
-import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
+import { cn } from "./lib/utils";
+import createGlobe from "cobe";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { IconBrandYoutubeFilled } from "@tabler/icons-react";
+import Link from "next/link";
 import Section from "./components/Section";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 
-export function BentoGridThirdDemo() {
+export function FeaturesSectionDemo() {
+  const features = [
+    {
+      title: "Track issues effectively",
+      description:
+        "Track and manage your project issues with ease using our intuitive interface.",
+      skeleton: <SkeletonOne />,
+      className:
+        "col-span-1 lg:col-span-4 border-b lg:border-r border-neutral-800",
+    },
+    {
+      title: "Capture pictures with AI",
+      description:
+        "Capture stunning photos effortlessly using our advanced AI technology.",
+      skeleton: <SkeletonTwo />,
+      className: "border-b col-span-1 lg:col-span-2 border-neutral-800",
+    },
+    {
+      title: "Watch our AI on YouTube",
+      description:
+        "Whether its you or Tyler Durden, you can get to know about our product on YouTube",
+      skeleton: <SkeletonThree />,
+      className: "col-span-1 lg:col-span-3 lg:border-r  border-neutral-800",
+    },
+    {
+      title: "Deploy in seconds",
+      description:
+        "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.",
+      skeleton: <SkeletonFour />,
+      className: "col-span-1 lg:col-span-3 border-b border-none",
+    },
+  ];
   return (
     <Section>
-      <h1 className="md:max-w-md lg:max-w-2xl max-w-[50rem] mx-auto mb-12 lg:mb-10 md:text-center font-bold text-5xl">
-        {" "}
-        Work Smarter, Not Harder with ZippyBot
-      </h1>
-      <BentoGrid className="max-w-4xl  mx-auto md:auto-rows-[20rem] mt-24">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            className={cn("[&>p:text-lg]", item.className)}
-            icon={item.icon}
-          />
-        ))}
-      </BentoGrid>
-      <BottomLine />
+      <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
+        <div className="px-8">
+          <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
+            Packed with thousands of features
+          </h4>
+
+          <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto  text-center font-normal text-neutral-300">
+            From Image generation to video generation, Everything AI has APIs
+            for literally everything. It can even create this website copy for
+            you.
+          </p>
+        </div>
+        <div className="relative ">
+          <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md border-neutral-800">
+            {features.map((feature) => (
+              <FeatureCard key={feature.title} className={feature.className}>
+                <FeatureTitle>{feature.title}</FeatureTitle>
+                <FeatureDescription>{feature.description}</FeatureDescription>
+                <div className=" h-full w-full">{feature.skeleton}</div>
+              </FeatureCard>
+            ))}
+          </div>
+        </div>
+      </div>
     </Section>
   );
 }
 
-const SkeletonOne = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
+const FeatureCard = ({ children, className }) => {
+  return (
+    <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
+      {children}
+    </div>
+  );
+};
 
+const FeatureTitle = ({ children }) => {
   return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-col space-y-2 "
-    >
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-full border  border-white/[0.2] p-2  items-center space-x-2 bg-black"
-      >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full  h-4 rounded-full  bg-neutral-900" />
-      </motion.div>
-      <motion.div
-        variants={variantsSecond}
-        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-black"
-      >
-        <div className="w-full  h-4 rounded-full bg-neutral-900" />
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-      </motion.div>
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center space-x-2 bg-black"
-      >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full  h-4 rounded-full bg-neutral-900" />
-      </motion.div>
-    </motion.div>
+    <p className=" max-w-5xl mx-auto text-left tracking-tight text-white text-xl md:text-2xl md:leading-snug">
+      {children}
+    </p>
   );
 };
-const SkeletonTwo = () => {
-  const variants = {
-    initial: {
-      width: 0,
-    },
-    animate: {
-      width: "100%",
-      transition: {
-        duration: 0.2,
-      },
-    },
-    hover: {
-      width: ["0%", "100%"],
-      transition: {
-        duration: 2,
-      },
-    },
-  };
-  const arr = new Array(6).fill(0);
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-col space-y-2"
-    >
-      {arr.map((_, i) => (
-        <motion.div
-          key={"skelenton-two" + i}
-          variants={variants}
-          style={{
-            maxWidth: Math.random() * (100 - 40) + 40 + "%",
-          }}
-          className="flex flex-row rounded-full border border-white/[0.2] p-2  items-center space-x-2 bg-black w-full h-4"
-        ></motion.div>
-      ))}
-    </motion.div>
-  );
-};
-const SkeletonThree = () => {
-  const variants = {
-    initial: {
-      backgroundPosition: "0 50%",
-    },
-    animate: {
-      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
-    },
-  };
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      variants={variants}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2] rounded-lg  flex-col space-y-2"
-      style={{
-        background:
-          "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
-        backgroundSize: "400% 400%",
-      }}
-    >
-      <motion.div className="h-full w-full rounded-lg"></motion.div>
-    </motion.div>
-  );
-};
-const SkeletonFour = () => {
-  const first = {
-    initial: {
-      x: 20,
-      rotate: -5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
-  const second = {
-    initial: {
-      x: -20,
-      rotate: 5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
-  return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-row space-x-2"
-    >
-      <motion.div
-        variants={first}
-        className="h-full w-1/3 rounded-2xl bg-black border-white/[0.1] border  flex flex-col items-center justify-center"
-      >
-        <img
-          src="images/bot.png"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Why apply for jobs? Zippybot will handle everything!
-        </p>
-        <p className="border border-red-500 bg-red-100 bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
-        </p>
-      </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl  p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center">
-        <img
-          src="images/bot.png"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Zippybot: The efficient way to level up your career.
-        </p>
-        <p className="border border-green-500  bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
-        </p>
-      </motion.div>
-      <motion.div
-        variants={second}
-        className="h-full w-1/3 rounded-2xl  p-4 bg-black border-white/[0.1] border  flex flex-col items-center justify-center"
-      >
-        <img
-          src="images/bot.png"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I need Zippybot… seriously, help me find a job!
-        </p>
-        <p className="border border-orange-500 bg-orange-100 bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
-        </p>
-      </motion.div>
-    </motion.div>
-  );
-};
-const SkeletonFive = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
 
+const FeatureDescription = ({ children }) => {
   return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] bg-dot-white/[0.2]  flex-col space-y-2"
+    <p
+      className={cn(
+        "text-sm md:text-base  max-w-4xl text-left mx-auto",
+        " text-center font-normal text-neutral-300",
+        "text-left max-w-sm mx-0 md:text-sm my-2"
+      )}
     >
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-2xl border border-white/[0.2] p-2  items-start space-x-2 bg-black"
-      >
-        <img
-          src="images/saran1.png.png"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <div className="flex flex-col tracking-tighter">
-          <p className="text-[10px]  ">
-            <span className="text-neutral-500">Meet the Founder -</span> &nbsp;
-            Saran Nagarajan
-          </p>
+      {children}
+    </p>
+  );
+};
 
-          <p className="text-xs text-neutral-500">
-            {" "}
-            My mission is to help gamers seize global opportunities without
-            compromising their playtime.
-          </p>
+export const SkeletonOne = () => {
+  return (
+    <div className="relative flex py-8 px-2 gap-10 h-full">
+      <div className="w-full  p-5  mx-auto bg-neutral-900 shadow-2xl group h-full">
+        <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
+          {/* TODO */}
+          <img
+            src="images/dis-bot.PNG"
+            alt="header"
+            width={800}
+            height={800}
+            className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
+          />
         </div>
-      </motion.div>
-      <motion.div
-        variants={variantsSecond}
-        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-black"
-      >
-        <p className="text-xs text-neutral-500">
-          <a href="https://x.com/Saran2302" target="_blank">
-            Follow me on X.
-          </a>
-        </p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-      </motion.div>
-    </motion.div>
+      </div>
+      <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t  from-black  via-black to-transparent w-full pointer-events-none" />
+      <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b  from-black via-transparent to-transparent w-full pointer-events-none" />
+    </div>
   );
 };
-const items = [
-  {
-    title: "Global Job Listings",
-    description: (
-      <span className="text-sm">
-        Fetch jobs from around the world tailored for gamers who value
-        efficiency.
-      </span>
-    ),
-    header: <SkeletonOne />,
-    className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-100" />,
-  },
-  {
-    title: "One-Click Application Links",
-    description: (
-      <span className="text-sm">
-        Simplified access to job applications, saving you time.
-      </span>
-    ),
-    header: <SkeletonTwo />,
-    className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-100" />,
-  },
-  {
-    title: "Tailored Alerts",
-    description: (
-      <span className="text-sm">
-        Receive job updates directly in your Discord server, personalized to
-        your preferences.
-      </span>
-    ),
-    header: <SkeletonThree />,
-    className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-100" />,
-  },
-  {
-    title: "Optimized for Gamers",
-    description: (
-      <span className="text-sm">
-        Designed for those who prioritize gaming but need career opportunities.
-      </span>
-    ),
-    header: <SkeletonFour />,
-    className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-100" />,
-  },
 
-  {
-    title: "24/7 Functionality",
-    description: (
-      <span className="text-sm">
-        Zippybot works tirelessly, ensuring you never miss an opportunity.
-      </span>
-    ),
-    header: <SkeletonFive />,
-    className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-100" />,
-  },
-];
+export const SkeletonThree = () => {
+  return (
+    <Link
+      href=""
+      target="__blank"
+      className="relative flex gap-10  h-full group/image"
+    >
+      <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
+        <div className="flex flex-1 w-full h-full flex-col space-y-2  relative">
+          {/* TODO */}
+          <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
+          <img
+            src="images/"
+            alt="header"
+            width={800}
+            height={800}
+            className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+          />
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+export const SkeletonTwo = () => {
+  const images = [
+    "https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=3425&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ];
+
+  const imageVariants = {
+    whileHover: {
+      scale: 1.1,
+      rotate: 0,
+      zIndex: 100,
+    },
+    whileTap: {
+      scale: 1.1,
+      rotate: 0,
+      zIndex: 100,
+    },
+  };
+  return (
+    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
+      {/* TODO */}
+      <div className="flex flex-row -ml-20">
+        {images.map((image, idx) => (
+          <motion.div
+            variants={imageVariants}
+            key={"images-first" + idx}
+            style={{
+              rotate: Math.random() * 20 - 10,
+            }}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"
+          >
+            <img
+              src={image}
+              alt="bali images"
+              width="500"
+              height="500"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+            />
+          </motion.div>
+        ))}
+      </div>
+      <div className="flex flex-row">
+        {images.map((image, idx) => (
+          <motion.div
+            key={"images-second" + idx}
+            style={{
+              rotate: Math.random() * 20 - 10,
+            }}
+            variants={imageVariants}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"
+          >
+            <img
+              src={image}
+              alt="bali images"
+              width="500"
+              height="500"
+              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
+            />
+          </motion.div>
+        ))}
+      </div>
+      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r  from-black to-transparent  h-full pointer-events-none" />
+      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l  from-black  to-transparent h-full pointer-events-none" />
+    </div>
+  );
+};
+
+export const SkeletonFour = () => {
+  return (
+    <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
+      <Globe className="absolute -right-10 md:-right-10 -bottom-80 md:-bottom-72" />
+    </div>
+  );
+};
+
+export const Globe = ({ className }) => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    let phi = 0;
+
+    if (!canvasRef.current) return;
+
+    const globe = createGlobe(canvasRef.current, {
+      devicePixelRatio: 2,
+      width: 600 * 2,
+      height: 600 * 2,
+      phi: 0,
+      theta: 0,
+      dark: 1,
+      diffuse: 1.2,
+      mapSamples: 16000,
+      mapBrightness: 6,
+      baseColor: [0.3, 0.3, 0.3],
+      markerColor: [0.1, 0.8, 1],
+      glowColor: [1, 1, 1],
+      markers: [
+        // longitude latitude
+        { location: [37.7595, -122.4367], size: 0.03 },
+        { location: [40.7128, -74.006], size: 0.1 },
+      ],
+      onRender: (state) => {
+        // Called on every animation frame.
+        // `state` will be an empty object, return updated params.
+        state.phi = phi;
+        phi += 0.01;
+      },
+    });
+
+    return () => {
+      globe.destroy();
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
+      className={className}
+    />
+  );
+};

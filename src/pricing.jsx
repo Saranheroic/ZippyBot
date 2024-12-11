@@ -7,11 +7,11 @@ import Heading from "./components/Heading";
 
 export function BackgroundGradientDemo() {
   return (
-    <Section className="overflow-hidden" id="pricing ">
+    <Section className="overflow-hidden   " id="pricing">
       <Heading
         tag="Get started with ZippyBot"
         title="Pay once, use forever"
-        className="mt-28"
+        className="mt-28 "
       />
 
       <div className="flex flex-wrap justify-center items-center  p-4 bg-n-8/90  gap-3">

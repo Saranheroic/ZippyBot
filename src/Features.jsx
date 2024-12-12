@@ -39,8 +39,8 @@ export function FeaturesSectionDemo() {
   ];
   return (
     <Section>
-      <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
-        <div className="px-8">
+      <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto ">
+        <div className="px-8 ">
           <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white">
             Packed with thousands of features
           </h4>
@@ -52,13 +52,13 @@ export function FeaturesSectionDemo() {
             that fit your lifestyle.
           </p>
         </div>
-        <div className="relative ">
-          <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md border-neutral-800">
+        <div className="relative bg-dot-white/[0.1]  ">
+          <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md border-neutral-800  ">
             {features.map((feature) => (
               <FeatureCard key={feature.title} className={feature.className}>
                 <FeatureTitle>{feature.title}</FeatureTitle>
                 <FeatureDescription>{feature.description}</FeatureDescription>
-                <div className=" h-full w-full">{feature.skeleton}</div>
+                <div className=" h-[600px] w-full ">{feature.skeleton}</div>
               </FeatureCard>
             ))}
           </div>
@@ -101,7 +101,7 @@ const FeatureDescription = ({ children }) => {
 export const SkeletonOne = () => {
   return (
     <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full  p-5  mx-auto bg-neutral-900 shadow-2xl group h-full">
+      <div className="w-full  p-5  mx-auto bg-neutral-900[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] shadow-2xl group h-full">
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <img
@@ -175,52 +175,6 @@ export const SkeletonTwo = () => {
             style={{
               rotate: Math.random() * 20 - 10,
             }}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"
-          >
-            <img
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div>
-      <div className="flex flex-row">
-        {images.map((image, idx) => (
-          <motion.div
-            key={"images-second" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            variants={imageVariants}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"
-          >
-            <img
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div>
-      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r  from-black to-transparent  h-full pointer-events-none" />
-      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l  from-black  to-transparent h-full pointer-events-none" />
-      <div className="flex flex-row">
-        {images.map((image, idx) => (
-          <motion.div
-            key={"images-second" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            variants={imageVariants}
             whileHover="whileHover"
             whileTap="whileTap"
             className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"

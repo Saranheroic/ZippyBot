@@ -7,6 +7,7 @@ import { BackgroundGradientDemo } from "./pricing";
 import Explain from "./components/Explain";
 import Roadmap from "./components/Roadmap";
 import Footer from "./components/Footer";
+import { Docs } from "./Docs";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Roadmap />
         <Footer />
         <Booking />
+        {/* <Docs /> */}
       </div>
 
       <ButtonGradient />

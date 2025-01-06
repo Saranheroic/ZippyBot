@@ -164,55 +164,6 @@ export const SkeletonTwo = () => {
       zIndex: 100,
     },
   };
-  return (
-    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
-      {/* TODO */}
-      <div className="flex flex-row -ml-20">
-        {images.map((image, idx) => (
-          <motion.div
-            variants={imageVariants}
-            key={"images-first" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"
-          >
-            <img
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div>
-      <div className="flex flex-row">
-        {images.map((image, idx) => (
-          <motion.div
-            key={"images-second" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            variants={imageVariants}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1  bg-neutral-800 border-neutral-700 border  flex-shrink-0 overflow-hidden"
-          >
-            <img
-              src={image}
-              alt="bali images"
-              width="500"
-              height="500"
-              className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
-            />
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
 };
 
 export const SkeletonFour = () => {

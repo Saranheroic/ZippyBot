@@ -17,7 +17,7 @@ export default function Booking() {
   return (
     <div className="flex flex-col justify-center items-center  ">
       <button
-        data-cal-link="2kgamer-plays-hkcfjv"
+        data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK}
         data-cal-config='{"theme":"dark"}'
         className="z-[999999999999]  fixed md:bottom-6 bottom-4 flex h-16 origin-center bg-black transform cursor-pointer items-center
 rounded-full py-4 px-6 text-base outline-none drop-shadow-md transition focus:outline-none fo

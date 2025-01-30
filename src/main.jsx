@@ -6,7 +6,11 @@ import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true, // 👈 Add this flag
+      }}
+    >
       <App />
     </BrowserRouter>
   </React.StrictMode>

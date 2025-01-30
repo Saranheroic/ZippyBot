@@ -106,7 +106,7 @@ export const SkeletonOne = () => {
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <img
-            src="images/dis-bot.PNG"
+            src="src/assests/images/dis-bot.PNG"
             alt="header"
             width={800}
             height={800}
@@ -132,7 +132,7 @@ export const SkeletonThree = () => {
           {/* TODO */}
           <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
           <img
-            src="images/thumbail.png"
+            src="src/assests/images/thumbail.png"
             alt="header"
             width={800}
             height={800}

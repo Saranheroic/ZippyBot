@@ -4,9 +4,7 @@ import path from "path";
 
 export default defineConfig({
   build: {
-    rollupOptions: {
-      external: ["react-icons/fa6"],
-    },
+    // No need to externalize "react-icons/fa6"
   },
   plugins: [react()],
   resolve: {

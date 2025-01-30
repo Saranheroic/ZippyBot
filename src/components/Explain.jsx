@@ -8,7 +8,7 @@ import { LeftCurve, RightCurve } from "../design/Collabration";
 
 const Explain = () => {
   return (
-    <Section>
+    <Section id="how-to-use">
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">AI Job Bot for seamless jobs </h2>

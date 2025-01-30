@@ -8,11 +8,15 @@ import Explain from "./components/Explain";
 import Roadmap from "./components/Roadmap";
 import Footer from "./components/Footer";
 import { Docs } from "./Docs";
+import Login from "./LoginPage/Login";
 
 const App = () => {
   return (
     <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden ">
+      <div>
+        <Login />
+      </div>
+      {/* <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Hero />
         <HomePage />
         <FeaturesSectionDemo />
@@ -21,10 +25,10 @@ const App = () => {
         <Roadmap />
         <Footer />
         <Booking />
-        {/* <Docs /> */}
+        <Docs />
       </div>
 
-      <ButtonGradient />
+      <ButtonGradient /> */}
     </>
   );
 };

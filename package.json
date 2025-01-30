@@ -25,14 +25,17 @@
     "@tsparticles/slim": "^3.7.1",
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
+    "express": "^4.21.2",
     "framer-motion": "^11.13.5",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^15.0.4",
+    "nodemon": "^3.1.9",
     "process": "^0.11.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-just-parallax": "^3.1.16",
     "react-router-dom": "^6.28.0",
+    "react-twitter-embed": "^4.0.4",
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {

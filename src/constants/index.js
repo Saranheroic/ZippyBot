@@ -1,14 +1,13 @@
-import Amazon from "/images/CompanyLogos/Amazon.png";
-import google from "/images/CompanyLogos/google.png";
-import apple from "/images/CompanyLogos/apple.png";
-import meta from "/images/CompanyLogos/meta.png";
-import netflix from "/images/CompanyLogos/netflix.png";
-import uber from "/images/CompanyLogos/uber.png";
-import microsoft from "/images/CompanyLogos/microsoft.png";
-import nvdia from "/images/CompanyLogos/nvdia.png";
-import roadmap1 from "/images/image-2.png";
-import roadmap2 from "/images/image-3.png";
-import roadmap4 from "/images/discord.png";
+import Amazon from "../assests/images/CompanyLogos/amazon.png";
+import google from "../assests/images/CompanyLogos/google.png";
+import apple from "../assests/images/CompanyLogos/apple.png";
+import meta from "../assests/images/CompanyLogos/meta.png";
+import netflix from "../assests/images/CompanyLogos/netflix.png";
+import uber from "../assests/images/CompanyLogos/uber.png";
+import microsoft from "../assests/images/CompanyLogos/microsoft.png";
+import nvdia from "../assests/images/CompanyLogos/nvdia.png";
+import roadmap1 from "../assests/images/image-2.png";
+import roadmap2 from "../assests/images/image-3.png";
 
 export const navigation = [
   {

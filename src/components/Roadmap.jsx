@@ -4,9 +4,9 @@ import Section from "./Section";
 import { roadmap } from "../constants";
 import Tagline from "./Tagline";
 import { Gradient } from "../design/Roadmap";
-import check2 from "/images/check.svg";
-import grid from "/images/grid.png";
-import loading1 from "/images/loading-01.svg";
+import check2 from "../assests/images/check.svg";
+import grid from "../assests/images/grid.png";
+import loading1 from "../assests/images/loading-01.svg";
 
 const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">

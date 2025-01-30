@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "./Section";
-import brainwaveSymbol from "/images/brainwave.svg";
-import check from "/images/check.svg";
+import brainwaveSymbol from "../assests/images/brainwave.svg";
+import check from "../assests/images/check.svg";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "../components/Button";
 import { LeftCurve, RightCurve } from "../design/Collabration";

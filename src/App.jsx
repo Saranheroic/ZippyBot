@@ -24,7 +24,7 @@ const App = () => {
         <HomePage />
         <FeaturesSectionDemo />
         <Explain />
-        <BackgroundGradientDemo />
+        {/* <BackgroundGradientDemo /> */}
         <Roadmap />
         <Footer />
         <Booking />

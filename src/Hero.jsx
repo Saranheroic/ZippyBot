@@ -2,6 +2,7 @@ import React from "react";
 import { navigation } from "./constants";
 import { useLocation } from "react-router-dom";
 import Button from "./components/Button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const pathname = useLocation;
@@ -34,14 +35,14 @@ const Hero = () => {
           </div>
         </nav>
         <a
-          href="#singup"
+          href=""
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
           Register
         </a>
-        <Button className="hidden lg:flex " href="#login">
-          Log In
-        </Button>
+        <Link to="/login">
+          <Button className="hidden lg:flex ">Log In</Button>
+        </Link>
       </div>
     </div>
   );

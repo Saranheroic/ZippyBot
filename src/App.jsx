@@ -9,14 +9,17 @@ import Roadmap from "./components/Roadmap";
 import Footer from "./components/Footer";
 import { Docs } from "./Docs";
 import Login from "./LoginPage/Login";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 const App = () => {
+  const location = useLocation();
+  // If user is on the login page, only show Login
+  if (location.pathname === "/login") {
+    return <Login />;
+  }
   return (
     <>
-      <div>
-        <Login />
-      </div>
-      {/* <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Hero />
         <HomePage />
         <FeaturesSectionDemo />
@@ -27,8 +30,7 @@ const App = () => {
         <Booking />
         <Docs />
       </div>
-
-      <ButtonGradient /> */}
+      <ButtonGradient />
     </>
   );
 };

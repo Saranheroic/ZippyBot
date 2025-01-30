@@ -2,10 +2,12 @@ import React from "react";
 import { useState } from "react";
 import Image from "../LoginPage/Logos/image.png";
 import GoogleSvg from "../LoginPage/Logos/icons8-google.svg";
-import { FaEyeSlash, FaEye } from "react-icons/fa6";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="flex min-h-screen">
@@ -33,7 +35,7 @@ const Login = () => {
             <input
               type="email"
               placeholder="Email"
-              className="w-full p-4 mb-6 border border-gray-300 rounded-lg text-lg focus:outline-none focus:border-black"
+              className="w-full p-4 mb-6 border border-gray-300 rounded-lg text-lg focus:outline-none focus:border-white"
             />
 
             {/* Password Input */}
@@ -41,14 +43,14 @@ const Login = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
-                className="w-full p-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:border-black"
+                className="w-full p-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:border-white"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-black"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-white"
               >
-                {showPassword ? <FaEyeSlash size={24} /> : <FaEye size={24} />}
+                {!showPassword ? <FaEyeSlash size={24} /> : <FaEye size={24} />}
               </button>
             </div>
 
@@ -69,7 +71,7 @@ const Login = () => {
               </div>
               <a
                 href="#"
-                className="text-lg text-gray-600 hover:underline hover:text-black"
+                className="text-lg text-gray-600 hover:underline hover:text-white"
               >
                 Forgot password?
               </a>
@@ -98,11 +100,18 @@ const Login = () => {
             Don't have an account?{" "}
             <a
               href="#"
-              className="font-semibold text-black-800 hover:underline"
+              className="font-semibold text-black-800 hover:underline hover:text-white"
             >
               Sign Up
             </a>
           </p>
+          {/* Back to Home Button */}
+          <button
+            onClick={() => navigate("/")}
+            className="mt-6 text-lg text-gray-600 hover:underline hover:text-white"
+          >
+            ← Back to Home
+          </button>
         </div>
       </div>
     </div>

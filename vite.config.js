@@ -3,6 +3,11 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      external: ["react-icons/fa6"],
+    },
+  },
   plugins: [react()],
   resolve: {
     alias: {

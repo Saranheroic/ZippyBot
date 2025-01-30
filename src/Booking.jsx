@@ -19,7 +19,7 @@ export default function Booking() {
       <button
         data-cal-link="2kgamer-plays-hkcfjv"
         data-cal-config='{"theme":"dark"}'
-        class="z-[999999999999]  fixed md:bottom-6 bottom-4 flex h-16 origin-center bg-black transform cursor-pointer items-center
+        className="z-[999999999999]  fixed md:bottom-6 bottom-4 flex h-16 origin-center bg-black transform cursor-pointer items-center
 rounded-full py-4 px-6 text-base outline-none drop-shadow-md transition focus:outline-none fo
 cus:ring-4 focus:ring-gray-600 focus:ring-opacity-50 active:scale-95 md:right-10 right-4"
       >

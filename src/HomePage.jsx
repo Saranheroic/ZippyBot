@@ -26,7 +26,7 @@ const HomePage = () => {
               <span className="inline-block relative">
                 <Cover>ZIPPYBOT</Cover>
                 <img
-                  src="src/assests/images/curve.png"
+                  src="/curve.png"
                   className="absolute top-full left-0 w-full xl:-mt-1"
                   alt="Curve"
                 />
@@ -38,7 +38,7 @@ const HomePage = () => {
             </p>
             <Button white>Get Started</Button>
             <div className="mt-16 rounded-2xl border-2 overflow-hidden border-gradient relative">
-              <img src="src/assests/images/robot.jpg" alt="zippybot" />
+              <img src="robot.jpg" alt="zippybot" />
             </div>
             <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
           </div>

@@ -6,11 +6,7 @@ const Generating = ({ className }) => {
       } text-base`}
     >
       <div className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-        <img
-          className="w-5 h-5 mr-4"
-          src="src/assests/images/loading.png"
-          alt="Loading"
-        />
+        <img className="w-5 h-5 mr-4" src="/loading.png" alt="Loading" />
       </div>
       Job is generating<span className="animate-pulse">...</span>
     </div>

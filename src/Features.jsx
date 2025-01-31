@@ -144,6 +144,11 @@ export const SkeletonThree = () => {
 };
 
 export const SkeletonTwo = () => {
+  useEffect(() => {
+    if (window.twttr) {
+      window.twttr.widgets.load(); // Ensure Twitter widgets initialize
+    }
+  }, []);
   return (
     <div className="border-none rounded-none shadow-none ">
       <TwitterTweetEmbed

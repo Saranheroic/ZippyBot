@@ -143,25 +143,33 @@ export const SkeletonThree = () => {
   );
 };
 
+//skeleton two
+
 export const SkeletonTwo = () => {
-  const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.charset = "utf-8";
+    document.body.appendChild(script);
 
-  return isClient ? (
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+  return (
     <div className="border-none rounded-none shadow-none ">
       <TwitterTweetEmbed
         tweetId="1876302762507727125"
         options={{
-          theme: "dark",
+          theme: "dark", // Force dark mode
         }}
       />
     </div>
-  ) : null;
+  );
 };
 
+//skeleton four
 export const SkeletonFour = () => {
   return (
     <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">

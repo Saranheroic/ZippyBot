@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import ButtonGradient from "./components/ButtonGradient";
 import HomePage from "./HomePage";
 import { FeaturesSectionDemo } from "./Features";
-import { BackgroundGradientDemo } from "./pricing";
+import { Pricing } from "./pricing";
 import Explain from "./components/Explain";
 import Roadmap from "./components/Roadmap";
 import Footer from "./components/Footer";
@@ -24,7 +24,7 @@ const App = () => {
         <HomePage />
         {/* <FeaturesSectionDemo /> */}
         <Explain />
-        {/* <BackgroundGradientDemo /> */}
+        <Pricing />
         <Roadmap />
         <Footer />
         <Booking />

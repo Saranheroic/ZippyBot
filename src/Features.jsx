@@ -144,16 +144,7 @@ export const SkeletonThree = () => {
 };
 
 export const SkeletonTwo = () => {
-  return (
-    <div className="border-none rounded-none shadow-none ">
-      <TwitterTweetEmbed
-        tweetId="1876302762507727125"
-        options={{
-          theme: "dark", // Force dark mode
-        }}
-      />
-    </div>
-  );
+  return <div className="border-none rounded-none shadow-none ">hi</div>;
 };
 export const SkeletonFour = () => {
   return (

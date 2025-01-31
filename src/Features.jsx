@@ -147,6 +147,7 @@ export const SkeletonThree = () => {
 
 export const SkeletonTwo = () => {
   useEffect(() => {
+    // Dynamically load the Twitter widget script
     const script = document.createElement("script");
     script.src = "https://platform.twitter.com/widgets.js";
     script.async = true;
@@ -154,17 +155,25 @@ export const SkeletonTwo = () => {
     document.body.appendChild(script);
 
     return () => {
+      // Clean up the script when the component unmounts
       document.body.removeChild(script);
     };
   }, []);
+
   return (
-    <div className="border-none rounded-none shadow-none ">
-      <TwitterTweetEmbed
-        tweetId="1876302762507727125"
-        options={{
-          theme: "dark", // Force dark mode
+    <div className="border-none rounded-none shadow-none overflow-hidden">
+      <blockquote
+        className="twitter-tweet "
+        dangerouslySetInnerHTML={{
+          __html: `
+            <p lang="en" dir="ltr">
+              I’ve been inactive for a while, but here’s why: I’m building Zippybot—a Discord bot that automates job hunting! It doesn’t just find global job listings for you; it also applies on your behalf, making life easier, especially for busy gamers.<br><br>
+              More details coming soon. Stay tuned! <a href="https://t.co/HIUuZyvGy5">pic.twitter.com/HIUuZyvGy5</a>
+            </p>
+            &mdash; saran N (@Saran2302) <a href="https://twitter.com/Saran2302/status/1876302762507727125?ref_src=twsrc%5Etfw">January 6, 2025</a>
+          `,
         }}
-      />
+      ></blockquote>
     </div>
   );
 };

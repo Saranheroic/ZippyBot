@@ -27,6 +27,7 @@ const App = () => {
         {/* <BackgroundGradientDemo /> */}
         <Roadmap />
         <Footer />
+        <Booking />
       </div>
       <ButtonGradient />
     </>

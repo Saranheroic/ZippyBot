@@ -144,22 +144,24 @@ export const SkeletonThree = () => {
 };
 
 export const SkeletonTwo = () => {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    if (window.twttr) {
-      window.twttr.widgets.load(); // Ensure Twitter widgets initialize
-    }
+    setIsClient(true);
   }, []);
-  return (
+
+  return isClient ? (
     <div className="border-none rounded-none shadow-none ">
       <TwitterTweetEmbed
         tweetId="1876302762507727125"
         options={{
-          theme: "dark", // Force dark mode
+          theme: "dark",
         }}
       />
     </div>
-  );
+  ) : null;
 };
+
 export const SkeletonFour = () => {
   return (
     <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">

@@ -10,12 +10,16 @@ import Footer from "./components/Footer";
 import { Docs } from "./Docs";
 import Login from "./LoginPage/Login";
 import { Routes, Route, useLocation } from "react-router-dom";
+import Register from "./LoginPage/Register";
 
 const App = () => {
   const location = useLocation();
   // If user is on the login page, only show Login
   if (location.pathname === "/login") {
     return <Login />;
+  }
+  if (location.pathname === "/register") {
+    return <Register />;
   }
   return (
     <>

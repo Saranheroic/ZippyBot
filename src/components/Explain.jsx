@@ -27,7 +27,12 @@ const Explain = () => {
             ))}
           </ul>
 
-          <Button>Try it now</Button>
+          <Button
+            href="https://discord.com/oauth2/authorize?client_id=1299762244585914459&permissions=8&integration_type=0&scope=bot"
+            target="_blank"
+          >
+            Try it now
+          </Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">

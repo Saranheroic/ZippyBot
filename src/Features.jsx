@@ -161,19 +161,19 @@ export const SkeletonTwo = () => {
   }, []);
 
   return (
-    <div className="border-none rounded-none shadow-none overflow-hidden">
-      <blockquote
-        className="twitter-tweet "
-        dangerouslySetInnerHTML={{
-          __html: `
-            <p lang="en" dir="ltr">
-              I’ve been inactive for a while, but here’s why: I’m building Zippybot—a Discord bot that automates job hunting! It doesn’t just find global job listings for you; it also applies on your behalf, making life easier, especially for busy gamers.<br><br>
-              More details coming soon. Stay tuned! <a href="https://t.co/HIUuZyvGy5">pic.twitter.com/HIUuZyvGy5</a>
-            </p>
-            &mdash; saran N (@Saran2302) <a href="https://twitter.com/Saran2302/status/1876302762507727125?ref_src=twsrc%5Etfw">January 6, 2025</a>
-          `,
-        }}
-      ></blockquote>
+    <div className="border-none rounded-none shadow-none ">
+      <blockquote className="twitter-tweet">
+        I’ve been inactive for a while, but here’s why: I’m building Zippybot—a
+        Discord bot that automates job hunting! It doesn’t just find global job
+        listings for you; it also applies on your behalf, making life easier,
+        especially for busy gamers.<br></br>More details coming soon. Stay
+        tuned!
+        <a href="https://t.co/HIUuZyvGy5">pic.twitter.com/HIUuZyvGy5</a>&mdash;
+        saran N (@Saran2302){" "}
+        <a href="https://twitter.com/Saran2302/status/1876302762507727125?ref_src=twsrc%5Etfw">
+          January 6, 2025
+        </a>
+      </blockquote>
     </div>
   );
 };

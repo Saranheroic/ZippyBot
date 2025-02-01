@@ -34,12 +34,14 @@ const Hero = () => {
             ))}
           </div>
         </nav>
-        <a
-          href=""
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-        >
-          Register
-        </a>
+        <Link to="/register">
+          <a
+            href=""
+            className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+          >
+            Register
+          </a>
+        </Link>
         <Link to="/login">
           <Button className="hidden lg:flex ">Log In</Button>
         </Link>

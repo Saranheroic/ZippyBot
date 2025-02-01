@@ -22,7 +22,7 @@ export const navItems = [
   },
   {
     name: "Login",
-    href: "#login",
+    href: "/login",
   },
 ];
 
@@ -35,7 +35,8 @@ export const socialLinks = [
   {
     name: "X",
     icon: faXTwitter,
-    href: "#x",
+    href: "https://x.com/Saran2302",
+    target: "_blank",
   },
   {
     name: "Discord",
@@ -68,7 +69,7 @@ export const Footer = () => {
         <div className="mt-16 flex flex-col items-center gap-8 md:flex-row-reverse md:justify-between">
           <div className="flex justify-center gap-6">
             {socialLinks.map((link) => (
-              <a href={link.href} key={link.name}>
+              <a href={link.href} key={link.name} target={link.target}>
                 <div className="size-10 rounded-full bg-gray-900 inline-flex items-center justify-center">
                   <FontAwesomeIcon icon={link.icon} className="size-4 " />
                 </div>

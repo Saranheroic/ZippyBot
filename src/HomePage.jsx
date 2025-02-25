@@ -5,6 +5,7 @@ import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import Button from "./components/Button";
 import Generating from "./components/Generating";
 import { logos } from "./constants";
+import { Link } from "react-router-dom";
 
 ("use client");
 import { BackgroundBeams } from "./components/ui/background-beams";
@@ -36,7 +37,10 @@ const HomePage = () => {
               Unleash the power of AI within zippybot. Apply to jobs instantly
               with zippyboy, the Discord bot job app.
             </p>
-            <Button white>Get Started</Button>
+            <Link to="/login">
+              <Button white>Get Started</Button>
+            </Link>
+
             <div className="mt-16 rounded-2xl border-2 overflow-hidden border-gradient relative">
               <img src="robot.jpg" alt="zippybot" />
             </div>

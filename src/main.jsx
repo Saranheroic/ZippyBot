@@ -4,15 +4,25 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 
+import { ClerkProvider } from "@clerk/clerk-react"; // ✅ Use correct import
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Clerk Publishable Key in .env file!");
+}
+
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter
-      future={{
-        v7_startTransition: true, // 👈 Add this flag
-        v7_relativeSplatPath: true,
-      }}
-    >
-      <App />
-    </BrowserRouter>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+      <BrowserRouter
+        future={{
+          v7_startTransition: true, // ✅ Keep this
+          v7_relativeSplatPath: true,
+        }}
+      >
+        <App />
+      </BrowserRouter>
+    </ClerkProvider>
   </React.StrictMode>
 );

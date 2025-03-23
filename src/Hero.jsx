@@ -3,9 +3,18 @@ import { navigation } from "./constants";
 import { useLocation } from "react-router-dom";
 import Button from "./components/Button";
 import { Link } from "react-router-dom";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 const Hero = () => {
   const pathname = useLocation;
+
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm">
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
@@ -34,17 +43,26 @@ const Hero = () => {
             ))}
           </div>
         </nav>
-        <Link to="/register">
-          <a
-            href=""
-            className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-          >
-            Register
-          </a>
-        </Link>
-        <Link to="/login">
-          <Button className="hidden lg:flex ">Log In</Button>
-        </Link>
+        {/* Auth Buttons */}
+        {/* Authentication Buttons */}
+        <SignedOut>
+          {" "}
+          {/* Show when user is NOT logged in */}
+          <SignUpButton>
+            <a className=" cursor-pointer button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block">
+              Register
+            </a>
+          </SignUpButton>
+          <SignInButton>
+            <Button className="hidden lg:flex">Log In</Button>
+          </SignInButton>
+        </SignedOut>
+
+        <SignedIn>
+          {" "}
+          {/* Show when user IS logged in */}
+          <UserButton />
+        </SignedIn>
       </div>
     </div>
   );

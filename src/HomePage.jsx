@@ -37,9 +37,8 @@ const HomePage = () => {
               Unleash the power of AI within zippybot. Apply to jobs instantly
               with zippyboy, the Discord bot job app.
             </p>
-            <Link to="/login">
-              <Button white>Get Started</Button>
-            </Link>
+
+            <Button white>Get Started</Button>
 
             <div className="mt-16 rounded-2xl border-2 overflow-hidden border-gradient relative">
               <img src="robot.jpg" alt="zippybot" />

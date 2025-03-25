@@ -31,7 +31,7 @@ const App = () => {
         <Pricing />
         <Roadmap />
         <Footer />
-        <Booking />
+        {/* <Booking /> */}
       </div>
       <ButtonGradient />
     </>

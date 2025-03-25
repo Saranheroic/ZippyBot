@@ -74,7 +74,7 @@ const Hero = () => {
             ))}
             {/* Mobile Auth Buttons - Only shown when signed out */}
             <SignedOut>
-              <div className="flex flex-col items-center w-full mt-4 space-y-4">
+              <div className="lg:hidden flex flex-col items-center w-full mt-4 space-y-4">
                 <SignUpButton>
                   <button
                     onClick={handleClick}
@@ -93,13 +93,6 @@ const Hero = () => {
                 </SignInButton>
               </div>
             </SignedOut>
-
-            {/* Mobile User Button - Only shown when signed in */}
-            <SignedIn>
-              <div className="mt-8">
-                <UserButton />
-              </div>
-            </SignedIn>
           </div>
 
           <HamburgerMenu />
@@ -123,7 +116,7 @@ const Hero = () => {
             <Button className="hidden lg:flex">Log In</Button>
           </SignInButton>
         </SignedOut>
-
+        <div className="pr-5"></div>
         <SignedIn>
           <UserButton />
         </SignedIn>
